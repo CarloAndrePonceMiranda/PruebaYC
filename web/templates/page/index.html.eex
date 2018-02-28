@@ -7,3 +7,23 @@
 <textarea id="chat-input" class="form-control" rows="3" placeholder="mensaje"></textarea>
 <small class="form-text text-muted">Presiona Enter al terminar.</small>
 </div>
+
+<script>
+
+function rand_code(chars, lon){
+code = "User-";
+for (x=0; x < 5; x++)
+{
+rand = Math.floor(Math.random()*chars.length);
+code += chars.substr(rand, 1);
+}
+return code;
+}
+
+caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+longitud = 20;
+
+rand_code(caracteres, longitud)
+document.getElementById('id1').value= rand_code(caracteres, longitud);
+
+</script>

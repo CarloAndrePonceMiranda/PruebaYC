@@ -77,6 +77,24 @@ chatInput.on("keypress", event => {
   }
 })
 
+function rand_code(chars, lon){
+code = "User-";
+for (x=0; x < 5; x++)
+{
+rand = Math.floor(Math.random()*chars.length);
+code += chars.substr(rand, 1);
+}
+return code;
+}
+
+caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+longitud = 20;
+
+rand_code(caracteres, longitud)
+document.getElementById('name').value= rand_code(caracteres, longitud); 
+
+
+
 
 channel.on("new_msg", payload => {
   var b = new Date();
